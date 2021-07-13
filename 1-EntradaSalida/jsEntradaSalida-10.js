@@ -21,19 +21,22 @@ function mostrarAumento()
 	//10Bis
 
 	let importe;
-	let porcentaje;
+	let porcentajeIngresado;
+	let porcentajeCalculado;
 	let resultado;
+	let mensaje;
 
 	importe=document.getElementById('txtIdImporte').value;
 	importe=parseInt(importe);
 
-	porcentaje=prompt("Introduja porcentaje:");
-	porcentaje=parseInt(porcentaje);
-	porcentaje=porcentaje/100;
-	porcentaje=importe*porcentaje;
+	porcentajeIngresado=prompt("Introduja porcentaje:");
+	porcentajeIngresado=parseInt(porcentajeIngresado);
 	
-	resultado=importe-porcentaje;
+	porcentajeCalculado=porcentajeIngresado/100;
+	porcentajeCalculado=importe*porcentajeCalculado;
+	
+	resultado=importe-porcentajeCalculado;
 
-	document.getElementById('txtIdResultado').value=resultado;
+	document.getElementById('txtIdResultado').value="El importe final es $"+resultado+" con un descuento de $"+porcentajeCalculado;
 
 }
