@@ -7,7 +7,7 @@ function mostrar()
 
 	sexoIngresado=prompt("Ingrese un sexo f o m");
 
-	while(sexoIngresado!="f")
+	while(sexoIngresado!="f" && sexoIngresado!="m")
 	{
 		sexoIngresado=prompt("Ingrese un sexo f o m");
 	}
