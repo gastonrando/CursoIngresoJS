@@ -20,7 +20,7 @@ function CalcularPrecio ()
     var precio;
     var impuesto;
     var mensaje;
-
+    
     //entrada
     precio=35;
 
@@ -33,7 +33,7 @@ function CalcularPrecio ()
 
     //console.log(cantidadLamparas+marcaLamparas);
 
-    //Operacion A
+   /* //Operacion A
     if(cantidadLamparas>5)
     {
         descuento=50;
@@ -121,6 +121,78 @@ function CalcularPrecio ()
     impuesto=precioFinal*impuesto;
     precioFinal=precioFinal+impuesto;
 
+    document.getElementById('txtIdprecioDescuento').value=mensaje
+ */
+
+    //ejercicio con switch
+    //Operacion A
+/*    if(cantidadLamparas>5)
+    {
+        descuento=50;
+    }
+    else*/
+
+        //OperacionB
+        switch(cantidadLamparas)
+        {
+            case 5:
+                switch(marcaLamparas)
+                {
+                    case "ArgentinaLuz":
+                        descuento=40;
+                    break;
+                    default:
+                        descuento=30
+                }
+            break;
+            case 4:
+                switch(marcaLamparas)
+                {
+                    case "ArgentinaLuz":
+                    case "FelipeLamparas":
+                        descuento=25;
+                    break
+                    default:
+                        descuento=20;
+                }
+            break;
+            case 3:
+                switch(marcaLamparas)
+                {
+                    case "ArgentinaLuz":
+                        descuento=15;
+                    break;
+                    case "FelipeLamparas":
+                        descuento=10
+                    break;
+                    default:
+                        descuento=5
+                }
+            break;
+            default:
+                descuento=50;
+       }
+       
+    
+    //cuentas parte 1/2
+    descuento=precio*descuento/100;
+    precioFinal=precio-descuento;
+    
+    //operacion E
+    //salida
+
+    if(precioFinal>120)
+    {
+        impuesto=precioFinal*10/100;
+        precioFinal=precioFinal+impuesto;
+        mensaje="El precio final es de $ "+precioFinal+". Usted pago $ "+impuesto+" de impuesto IIBB.";
+    }
+    else
+    {
+        impuesto=0;
+        mensaje="El precio final es de $ "+precioFinal;
+    }
+    
     document.getElementById('txtIdprecioDescuento').value=mensaje
     
 }

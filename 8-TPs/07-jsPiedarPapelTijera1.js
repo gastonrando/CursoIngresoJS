@@ -8,7 +8,7 @@ var eleccionMaquina;
 
 function comenzar()
 {
-	
+	Math.floor(math)
 
 
 }//FIN DE LA FUNCIÓN
