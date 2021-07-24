@@ -13,9 +13,31 @@ function mostrar()
 	respuesta='si';
 	while(respuesta=="si")
 	{
-		
-		respuesta=prompt("desea continuar?");
+		numeroIngresado=prompt("Ingrese un numero");
+		numeroIngresado=parseInt(numeroIngresado);
+
+		if(banderaDelPrimero=="es el primero")
+		{
+			banderaDelPrimero="ya paso";
+			numeroMaximo=numeroIngresado;
+			numeroMinimo=numeroIngresado;
+		}
+		else
+		{
+			if(numeroIngresado>numeroMaximo)
+			{
+				numeroMaximo=numeroIngresado;
+			}
+			else
+			{
+				if(numeroIngresado<numeroMinimo)
+				{
+					numeroMinimo=numeroIngresado
+				}
+			}
+		}
+		respuesta=prompt("desea continuar?\nIngrese si o no");
 	}
 	txtIdMaximo.value=numeroMaximo;
-	txtIdMinimmo.value=numeroMinimo;
+	txtIdMinimo.value=numeroMinimo;
 }//FIN DE LA FUNCIÓN
